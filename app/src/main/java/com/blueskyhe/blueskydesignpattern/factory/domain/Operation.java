@@ -28,4 +28,5 @@ public class Operation {
         double result = 0;
         return result;
     }
+    
 }
