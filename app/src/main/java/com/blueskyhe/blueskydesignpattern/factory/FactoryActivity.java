@@ -2,10 +2,17 @@ package com.blueskyhe.blueskydesignpattern.factory;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.blueskyhe.blueskydesignpattern.R;
 import com.blueskyhe.blueskydesignpattern.factory.domains.Operation;
@@ -17,9 +24,10 @@ public class FactoryActivity extends Activity {
     private EditText mInputNumberA;
     private EditText mInputNumberB;
     private Spinner mSpinner;
+    private TextView mResult;
+
 
     private Operation mOper;
-    private OperationFactory mOperationFactory;
 
 
     @Override
@@ -30,7 +38,41 @@ public class FactoryActivity extends Activity {
     }
 
     private void initViews() {
-        
+        mInputNumberA = (EditText) findViewById(R.id.et_input_number_A);
+        mInputNumberB = (EditText) findViewById(R.id.et_input_number_B);
+        mSpinner = (Spinner) findViewById(R.id.spinner);
+        mResult = (TextView) findViewById(R.id.tv_results);
+
+        final String[] mItems = OperationFactory.getAllOperations();
+
+        mSpinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mItems));
+
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mOper = OperationFactory.createOperation(mItems[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast.makeText(FactoryActivity.this, "Please check your inputs", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void calculate(View view) {
+        String mNumberA = mInputNumberA.getText().toString().trim();
+        String mNumberB = mInputNumberB.getText().toString().trim();
+
+        if (TextUtils.isEmpty(mNumberA) || TextUtils.isEmpty(mNumberB)) {
+            Toast.makeText(this, "Please check your inputs", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mOper.setNumberA(Double.parseDouble(mNumberA));
+        mOper.setNumberB(Double.parseDouble(mNumberB));
+
+        mResult.setText(mOper.getResult() + "");
     }
 
 

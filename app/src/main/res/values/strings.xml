@@ -3,7 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="factory_activity">Factory Activity</string>
 
     <string name="et_input_numberA_hint">Please input NumberA:</string>
     <string name="et_input_numberB_hint">Please input NumberB:</string>
+    <string name="tv_result">Result</string>
+    <string name="btn_calculate">Calculate</string>
+
+
 </resources>

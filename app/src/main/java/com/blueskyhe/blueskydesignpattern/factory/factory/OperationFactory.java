@@ -40,4 +40,10 @@ public class OperationFactory {
         return oper;
 
     }
+
+    public static String[] getAllOperations() {
+
+        return new String[]{OPERATION_ADD, OPERATION_SUB, OPERATION_MUL, OPERATION_DIV};
+        
+    }
 }
