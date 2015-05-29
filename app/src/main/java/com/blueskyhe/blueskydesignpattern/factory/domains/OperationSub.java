@@ -1,4 +1,4 @@
-package com.blueskyhe.blueskydesignpattern.factory.domain;
+package com.blueskyhe.blueskydesignpattern.factory.domains;
 
 /**
  * Created by yiding on 5/28/15.
@@ -13,5 +13,5 @@ public class OperationSub extends Operation {
         return result;
 
     }
-    
+
 }

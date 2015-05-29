@@ -4,16 +4,33 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.blueskyhe.blueskydesignpattern.R;
+import com.blueskyhe.blueskydesignpattern.factory.domains.Operation;
+import com.blueskyhe.blueskydesignpattern.factory.factory.OperationFactory;
 
 
 public class FactoryActivity extends Activity {
+
+    private EditText mInputNumberA;
+    private EditText mInputNumberB;
+    private Spinner mSpinner;
+
+    private Operation mOper;
+    private OperationFactory mOperationFactory;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_factory);
+        initViews();
+    }
+
+    private void initViews() {
+        
     }
 
 
