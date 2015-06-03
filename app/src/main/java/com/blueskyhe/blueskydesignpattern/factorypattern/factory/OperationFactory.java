@@ -1,10 +1,10 @@
-package com.blueskyhe.blueskydesignpattern.factory.factory;
+package com.blueskyhe.blueskydesignpattern.factorypattern.factory;
 
-import com.blueskyhe.blueskydesignpattern.factory.domains.Operation;
-import com.blueskyhe.blueskydesignpattern.factory.domains.OperationAdd;
-import com.blueskyhe.blueskydesignpattern.factory.domains.OperationDiv;
-import com.blueskyhe.blueskydesignpattern.factory.domains.OperationMul;
-import com.blueskyhe.blueskydesignpattern.factory.domains.OperationSub;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.Operation;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.OperationAdd;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.OperationDiv;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.OperationMul;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.OperationSub;
 
 /**
  * Created by yiding on 5/29/15.

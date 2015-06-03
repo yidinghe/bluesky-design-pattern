@@ -1,4 +1,4 @@
-package com.blueskyhe.blueskydesignpattern.factory.domains;
+package com.blueskyhe.blueskydesignpattern.factorypattern.domains;
 
 /**
  * Created by yiding on 5/28/15.

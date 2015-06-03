@@ -3,7 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="factory_activity">Factory Activity</string>
+    <string name="factory_activity">Factory</string>
 
     <string name="et_input_numberA_hint">Please input NumberA:</string>
     <string name="et_input_numberB_hint">Please input NumberB:</string>

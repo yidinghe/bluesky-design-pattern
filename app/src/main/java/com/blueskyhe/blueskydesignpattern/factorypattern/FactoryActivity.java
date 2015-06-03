@@ -1,4 +1,4 @@
-package com.blueskyhe.blueskydesignpattern.factory;
+package com.blueskyhe.blueskydesignpattern.factorypattern;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,15 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blueskyhe.blueskydesignpattern.R;
-import com.blueskyhe.blueskydesignpattern.factory.domains.Operation;
-import com.blueskyhe.blueskydesignpattern.factory.factory.OperationFactory;
+import com.blueskyhe.blueskydesignpattern.factorypattern.domains.Operation;
+import com.blueskyhe.blueskydesignpattern.factorypattern.factory.OperationFactory;
 
 
 public class FactoryActivity extends Activity {
